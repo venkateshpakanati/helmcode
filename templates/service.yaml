@@ -8,9 +8,9 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: 80
+      targetPort: 443
       protocol: TCP
-      name: http
+      name: https
   selector:
     app.kubernetes.io/name: {{ include "helm-test.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}

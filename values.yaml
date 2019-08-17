@@ -5,8 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: nginx
-  tag: stable
+  repository: venkateshpakanati/mycustom-nginx
+  tag: latest
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
@@ -15,7 +15,7 @@ fullnameOverride: ""
 
 service:
   type: NodePort
-  port: 8001
+  port: 8005
 
 ingress:
   enabled: false
